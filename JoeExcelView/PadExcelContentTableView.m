@@ -14,12 +14,12 @@
 static NSString *tbIdentify = @"tableViewCellIdentify";
 static NSString *clIdentify = @"collectionViewCellIdentify";
 @interface PadExcelContentTableView ()<UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
-@property (nonatomic, strong) NSArray *numArr;
+@property(nonatomic, strong) NSMutableArray *cellModelArray;
+@property(nonatomic, assign) NSUInteger frozenNumber;
 @property (nonatomic) CGPoint cellContentOffSet;
 @end
 
 @implementation PadExcelContentTableView
-@synthesize numArr;
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style
 {
@@ -31,13 +31,18 @@ static NSString *clIdentify = @"collectionViewCellIdentify";
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self registerNib:[UINib nibWithNibName:@"JContentTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"JContentCellID"];
         
-        numArr = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20"];
     }
     return self;
 }
 
+- (void)updateWithModel:(NSMutableArray *)cellModelArray startAtIndex:(NSUInteger)frozenNumber {
+    self.cellModelArray = cellModelArray;
+    self.frozenNumber = frozenNumber;
+    [self reloadData];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return numArr.count;
+    return self.cellModelArray.count - 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -58,11 +63,12 @@ static NSString *clIdentify = @"collectionViewCellIdentify";
         contentCollectionView.backgroundColor = [UIColor whiteColor];
         contentCollectionView.delegate = self;
         contentCollectionView.dataSource = self;
+        contentCollectionView.tag = indexPath.row;
         [cell.contentView addSubview:contentCollectionView];
         [contentCollectionView registerClass:[PadExcelContentCollectionViewCell class] forCellWithReuseIdentifier:clIdentify];
     }
     
-    cell.leftTextLab.text = numArr[indexPath.row];
+    cell.leftTextLab.text = self.cellModelArray[indexPath.row + 1][0];
     for (UIView *view in cell.contentView.subviews) {
         if ([view isKindOfClass:[UICollectionView class]]) {
             UICollectionView *collectionView = (UICollectionView *)view;
@@ -77,13 +83,14 @@ static NSString *clIdentify = @"collectionViewCellIdentify";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 20;
+    NSArray * array = self.cellModelArray[collectionView.tag + 1];
+    return array.count - self.frozenNumber;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PadExcelContentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:clIdentify forIndexPath:indexPath];
     cell.backgroundColor = [UIColor cyanColor];
-    cell.textLab.text = @"哈哈哈";
+    cell.textLab.text = self.cellModelArray[collectionView.tag + 1][indexPath.row + self.frozenNumber];
     return cell;
 }
 

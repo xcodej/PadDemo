@@ -16,7 +16,6 @@
 
 @property (nonatomic, strong) PadExcelContentTableView *jContentTableView;
 @property (nonatomic, strong) PadExcelHeaderView *topCollectionView;
-
 @end
 
 
@@ -25,10 +24,20 @@
 @synthesize topCollectionView;
 
 
-#warning -- 如果想在类外面处理ContentTableView和TopCollectionView可以将他们的Delegate和DataSource代理出来 例如JContentTableView中CollectionView的didSelected方法...
-- (instancetype)initWithFrame:(CGRect)frame
+//#warning -- 如果想在类外面处理ContentTableView和TopCollectionView可以将他们的Delegate和DataSource代理出来 例如JContentTableView中CollectionView的didSelected方法...
+
+- (instancetype)initWithModels:(NSMutableArray *)models frozenNumber:(NSUInteger)frozenNumber
 {
-    if (self = [super initWithFrame:frame]) {
+    self = [super init];
+    if (self) {
+        self.models = models;
+        self.frozenNumber = frozenNumber;
+        [self initViews];
+    }
+    return self;
+}
+
+- (void)initViews {
         
         UILabel *vNumLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
         vNumLab.backgroundColor = [UIColor yellowColor];
@@ -40,6 +49,7 @@
         UICollectionViewFlowLayout *collectionViewFlowLayout = [[UICollectionViewFlowLayout alloc] init];
         [collectionViewFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
         topCollectionView = [[PadExcelHeaderView alloc] initWithFrame:CGRectZero collectionViewLayout:collectionViewFlowLayout];
+        [topCollectionView updateWithHeaders:_models.firstObject startAtIndex:_frozenNumber];
         topCollectionView.showsHorizontalScrollIndicator = NO;
         [self addSubview:topCollectionView];
         __weak typeof(self) weakSelf = self;
@@ -54,6 +64,7 @@
         [topCollectionView addObserver:self forKeyPath:TopCollectionViewObserver options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
         
         jContentTableView = [[PadExcelContentTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    [jContentTableView updateWithModel:_models startAtIndex:self.frozenNumber];
         [self addSubview:jContentTableView];
         [jContentTableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.trailing.bottom.equalTo(weakSelf);
@@ -62,8 +73,7 @@
         
         // 添加Observer
         [jContentTableView addObserver:self forKeyPath:JContentTableViewCellCollectionViewObserver options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    }
-    return self;
+
 }
 
 // 不做容错处理crash

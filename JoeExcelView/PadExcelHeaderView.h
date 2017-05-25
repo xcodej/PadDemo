@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PadExcelHeaderView : UICollectionView
-@property(nonatomic, strong) NSMutableArray *headerArray;
-@property(nonatomic, assign) NSUInteger frozenNumber;
+- (void)updateWithHeaders:(NSMutableArray *)headerArray startAtIndex:(NSUInteger)frozenNumber;
 @end

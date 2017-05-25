@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PadExcelContentTableView : UITableView
-
+- (void)updateWithModel:(NSMutableArray *)cellModelArray startAtIndex:(NSUInteger)frozenNumber;
 
 @end

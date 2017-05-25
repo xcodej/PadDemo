@@ -13,13 +13,12 @@
 static NSString *topClIdentify = @"topCollectionViewCellIdentify";
 
 @interface PadExcelHeaderView ()<UICollectionViewDelegate, UICollectionViewDataSource>
-
-@property (nonatomic, strong) NSArray *numArr;
-
+@property(nonatomic, strong) NSMutableArray *headerArray;
+@property(nonatomic, assign) NSUInteger frozenNumber;
 @end
 
 @implementation PadExcelHeaderView
-@synthesize numArr;
+
 
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(nonnull UICollectionViewLayout *)layout{
     if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
@@ -28,9 +27,16 @@ static NSString *topClIdentify = @"topCollectionViewCellIdentify";
         self.dataSource = self;
         [self registerClass:[PadExcelHeaderViewCell class] forCellWithReuseIdentifier:topClIdentify];
         
-        numArr = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20"];
+//        numArr = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20"];
+        
     }
     return self;
+}
+
+- (void)updateWithHeaders:(NSMutableArray *)headerArray startAtIndex:(NSUInteger)frozenNumber {
+    self.headerArray = headerArray;
+    self.frozenNumber = frozenNumber;
+    [self reloadData];
 }
 
 - (id)valueForUndefinedKey:(NSString *)key{
@@ -44,12 +50,12 @@ static NSString *topClIdentify = @"topCollectionViewCellIdentify";
 #pragma mark --collectionViewDataSource&&collectionViewDelegate
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return numArr.count;
+    return self.headerArray.count - self.frozenNumber;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PadExcelHeaderViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:topClIdentify forIndexPath:indexPath];
-    cell.topTextLab.text = numArr[indexPath.row];
+    cell.topTextLab.text = self.headerArray[indexPath.row + self.frozenNumber];
     return cell;
 }
 

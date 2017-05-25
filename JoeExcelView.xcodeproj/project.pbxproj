@@ -1,456 +1,1049 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		13FA95A2FB062369381562ED /* libPods-JoeExcelView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31EAB0713006E8C92A75D70 /* libPods-JoeExcelView.a */; };
-		D83A2A941DFA8D340018FA38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D83A2A931DFA8D340018FA38 /* main.m */; };
-		D83A2A971DFA8D340018FA38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D83A2A961DFA8D340018FA38 /* AppDelegate.m */; };
-		D83A2A9A1DFA8D340018FA38 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83A2A991DFA8D340018FA38 /* ViewController.m */; };
-		D83A2A9D1DFA8D340018FA38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D83A2A9B1DFA8D340018FA38 /* Main.storyboard */; };
-		D83A2A9F1DFA8D340018FA38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D83A2A9E1DFA8D340018FA38 /* Assets.xcassets */; };
-		D83A2AA21DFA8D340018FA38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D83A2AA01DFA8D340018FA38 /* LaunchScreen.storyboard */; };
-		D83A2AAB1DFA8D8B0018FA38 /* PadExcelContentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D83A2AAA1DFA8D8B0018FA38 /* PadExcelContentTableView.m */; };
-		D83A2AB21DFA8E360018FA38 /* PadExcelContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D83A2AB01DFA8E360018FA38 /* PadExcelContentTableViewCell.m */; };
-		D83A2AB71DFA921B0018FA38 /* PadExcelContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D83A2AB51DFA921B0018FA38 /* PadExcelContentCollectionViewCell.m */; };
-		D83A2ABD1DFA9EB80018FA38 /* PadExcelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D83A2ABC1DFA9EB80018FA38 /* PadExcelHeaderView.m */; };
-		D83A2AC01DFA9EC60018FA38 /* PadExcelHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D83A2ABF1DFA9EC60018FA38 /* PadExcelHeaderViewCell.m */; };
-		D83A2AC31DFA9FB90018FA38 /* PadExcelView.m in Sources */ = {isa = PBXBuildFile; fileRef = D83A2AC21DFA9FB90018FA38 /* PadExcelView.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		A31EAB0713006E8C92A75D70 /* libPods-JoeExcelView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JoeExcelView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5761FC8A78F7090E93A74AD /* Pods-JoeExcelView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoeExcelView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JoeExcelView/Pods-JoeExcelView.debug.xcconfig"; sourceTree = "<group>"; };
-		AE2D5BD8DD55A7DB6E35B4E2 /* Pods-JoeExcelView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoeExcelView.release.xcconfig"; path = "Pods/Target Support Files/Pods-JoeExcelView/Pods-JoeExcelView.release.xcconfig"; sourceTree = "<group>"; };
-		D83A2A8F1DFA8D340018FA38 /* JoeExcelView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoeExcelView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D83A2A931DFA8D340018FA38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D83A2A951DFA8D340018FA38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D83A2A961DFA8D340018FA38 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D83A2A981DFA8D340018FA38 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D83A2A991DFA8D340018FA38 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D83A2A9C1DFA8D340018FA38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D83A2A9E1DFA8D340018FA38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D83A2AA11DFA8D340018FA38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D83A2AA31DFA8D340018FA38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D83A2AA91DFA8D8B0018FA38 /* PadExcelContentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadExcelContentTableView.h; sourceTree = "<group>"; };
-		D83A2AAA1DFA8D8B0018FA38 /* PadExcelContentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadExcelContentTableView.m; sourceTree = "<group>"; };
-		D83A2AAF1DFA8E360018FA38 /* PadExcelContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadExcelContentTableViewCell.h; sourceTree = "<group>"; };
-		D83A2AB01DFA8E360018FA38 /* PadExcelContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadExcelContentTableViewCell.m; sourceTree = "<group>"; };
-		D83A2AB41DFA921B0018FA38 /* PadExcelContentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadExcelContentCollectionViewCell.h; sourceTree = "<group>"; };
-		D83A2AB51DFA921B0018FA38 /* PadExcelContentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadExcelContentCollectionViewCell.m; sourceTree = "<group>"; };
-		D83A2ABB1DFA9EB80018FA38 /* PadExcelHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadExcelHeaderView.h; sourceTree = "<group>"; };
-		D83A2ABC1DFA9EB80018FA38 /* PadExcelHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadExcelHeaderView.m; sourceTree = "<group>"; };
-		D83A2ABE1DFA9EC60018FA38 /* PadExcelHeaderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadExcelHeaderViewCell.h; sourceTree = "<group>"; };
-		D83A2ABF1DFA9EC60018FA38 /* PadExcelHeaderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadExcelHeaderViewCell.m; sourceTree = "<group>"; };
-		D83A2AC11DFA9FB80018FA38 /* PadExcelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadExcelView.h; sourceTree = "<group>"; };
-		D83A2AC21DFA9FB90018FA38 /* PadExcelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadExcelView.m; sourceTree = "<group>"; };
-		D83A2AC41DFAA9C30018FA38 /* JoeExcel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JoeExcel.h; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		D83A2A8C1DFA8D340018FA38 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				13FA95A2FB062369381562ED /* libPods-JoeExcelView.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		BB6D2F4098FE2C42A1E5C005 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A31EAB0713006E8C92A75D70 /* libPods-JoeExcelView.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D83A2A861DFA8D340018FA38 = {
-			isa = PBXGroup;
-			children = (
-				D83A2A911DFA8D340018FA38 /* JoeExcelView */,
-				D83A2A901DFA8D340018FA38 /* Products */,
-				DC4606EB0F2BEC67A5747E6C /* Pods */,
-				BB6D2F4098FE2C42A1E5C005 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		D83A2A901DFA8D340018FA38 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D83A2A8F1DFA8D340018FA38 /* JoeExcelView.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D83A2A911DFA8D340018FA38 /* JoeExcelView */ = {
-			isa = PBXGroup;
-			children = (
-				D83A2A951DFA8D340018FA38 /* AppDelegate.h */,
-				D83A2A961DFA8D340018FA38 /* AppDelegate.m */,
-				D83A2A981DFA8D340018FA38 /* ViewController.h */,
-				D83A2A991DFA8D340018FA38 /* ViewController.m */,
-				D83A2AC71DFAAEB90018FA38 /* ExcelView */,
-				D83A2A9B1DFA8D340018FA38 /* Main.storyboard */,
-				D83A2A9E1DFA8D340018FA38 /* Assets.xcassets */,
-				D83A2AA01DFA8D340018FA38 /* LaunchScreen.storyboard */,
-				D83A2AA31DFA8D340018FA38 /* Info.plist */,
-				D83A2A921DFA8D340018FA38 /* Supporting Files */,
-			);
-			path = JoeExcelView;
-			sourceTree = "<group>";
-		};
-		D83A2A921DFA8D340018FA38 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D83A2A931DFA8D340018FA38 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D83A2AC51DFAAE8B0018FA38 /* ExcelContent */ = {
-			isa = PBXGroup;
-			children = (
-				D83A2AA91DFA8D8B0018FA38 /* PadExcelContentTableView.h */,
-				D83A2AAA1DFA8D8B0018FA38 /* PadExcelContentTableView.m */,
-				D83A2AAF1DFA8E360018FA38 /* PadExcelContentTableViewCell.h */,
-				D83A2AB01DFA8E360018FA38 /* PadExcelContentTableViewCell.m */,
-				D83A2AB41DFA921B0018FA38 /* PadExcelContentCollectionViewCell.h */,
-				D83A2AB51DFA921B0018FA38 /* PadExcelContentCollectionViewCell.m */,
-			);
-			name = ExcelContent;
-			sourceTree = "<group>";
-		};
-		D83A2AC61DFAAEA90018FA38 /* ExcelHeader */ = {
-			isa = PBXGroup;
-			children = (
-				D83A2ABB1DFA9EB80018FA38 /* PadExcelHeaderView.h */,
-				D83A2ABC1DFA9EB80018FA38 /* PadExcelHeaderView.m */,
-				D83A2ABE1DFA9EC60018FA38 /* PadExcelHeaderViewCell.h */,
-				D83A2ABF1DFA9EC60018FA38 /* PadExcelHeaderViewCell.m */,
-			);
-			name = ExcelHeader;
-			sourceTree = "<group>";
-		};
-		D83A2AC71DFAAEB90018FA38 /* ExcelView */ = {
-			isa = PBXGroup;
-			children = (
-				D83A2AC61DFAAEA90018FA38 /* ExcelHeader */,
-				D83A2AC51DFAAE8B0018FA38 /* ExcelContent */,
-				D83A2AC41DFAA9C30018FA38 /* JoeExcel.h */,
-				D83A2AC11DFA9FB80018FA38 /* PadExcelView.h */,
-				D83A2AC21DFA9FB90018FA38 /* PadExcelView.m */,
-			);
-			name = ExcelView;
-			sourceTree = "<group>";
-		};
-		DC4606EB0F2BEC67A5747E6C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A5761FC8A78F7090E93A74AD /* Pods-JoeExcelView.debug.xcconfig */,
-				AE2D5BD8DD55A7DB6E35B4E2 /* Pods-JoeExcelView.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		D83A2A8E1DFA8D340018FA38 /* JoeExcelView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D83A2AA61DFA8D340018FA38 /* Build configuration list for PBXNativeTarget "JoeExcelView" */;
-			buildPhases = (
-				5721F4F6E81E40B68342F743 /* [CP] Check Pods Manifest.lock */,
-				D83A2A8B1DFA8D340018FA38 /* Sources */,
-				D83A2A8C1DFA8D340018FA38 /* Frameworks */,
-				D83A2A8D1DFA8D340018FA38 /* Resources */,
-				572B6DE9D74B80C2F773603D /* [CP] Embed Pods Frameworks */,
-				C0E6FD48A93FE5E5F91B3A7A /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = JoeExcelView;
-			productName = JoeExcelView;
-			productReference = D83A2A8F1DFA8D340018FA38 /* JoeExcelView.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D83A2A871DFA8D340018FA38 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = QQ;
-				TargetAttributes = {
-					D83A2A8E1DFA8D340018FA38 = {
-						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
-					};
-				};
-			};
-			buildConfigurationList = D83A2A8A1DFA8D340018FA38 /* Build configuration list for PBXProject "JoeExcelView" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = D83A2A861DFA8D340018FA38;
-			productRefGroup = D83A2A901DFA8D340018FA38 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				D83A2A8E1DFA8D340018FA38 /* JoeExcelView */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		D83A2A8D1DFA8D340018FA38 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D83A2AA21DFA8D340018FA38 /* LaunchScreen.storyboard in Resources */,
-				D83A2A9F1DFA8D340018FA38 /* Assets.xcassets in Resources */,
-				D83A2A9D1DFA8D340018FA38 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5721F4F6E81E40B68342F743 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		572B6DE9D74B80C2F773603D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JoeExcelView/Pods-JoeExcelView-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C0E6FD48A93FE5E5F91B3A7A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JoeExcelView/Pods-JoeExcelView-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		D83A2A8B1DFA8D340018FA38 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D83A2AC31DFA9FB90018FA38 /* PadExcelView.m in Sources */,
-				D83A2A9A1DFA8D340018FA38 /* ViewController.m in Sources */,
-				D83A2A971DFA8D340018FA38 /* AppDelegate.m in Sources */,
-				D83A2AB71DFA921B0018FA38 /* PadExcelContentCollectionViewCell.m in Sources */,
-				D83A2AAB1DFA8D8B0018FA38 /* PadExcelContentTableView.m in Sources */,
-				D83A2AC01DFA9EC60018FA38 /* PadExcelHeaderViewCell.m in Sources */,
-				D83A2ABD1DFA9EB80018FA38 /* PadExcelHeaderView.m in Sources */,
-				D83A2A941DFA8D340018FA38 /* main.m in Sources */,
-				D83A2AB21DFA8E360018FA38 /* PadExcelContentTableViewCell.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D83A2A9B1DFA8D340018FA38 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D83A2A9C1DFA8D340018FA38 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D83A2AA01DFA8D340018FA38 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D83A2AA11DFA8D340018FA38 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		D83A2AA41DFA8D340018FA38 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D83A2AA51DFA8D340018FA38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D83A2AA71DFA8D340018FA38 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5761FC8A78F7090E93A74AD /* Pods-JoeExcelView.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = JoeExcelView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = QQ.JoeExcelView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		D83A2AA81DFA8D340018FA38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE2D5BD8DD55A7DB6E35B4E2 /* Pods-JoeExcelView.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = JoeExcelView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = QQ.JoeExcelView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		D83A2A8A1DFA8D340018FA38 /* Build configuration list for PBXProject "JoeExcelView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D83A2AA41DFA8D340018FA38 /* Debug */,
-				D83A2AA51DFA8D340018FA38 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D83A2AA61DFA8D340018FA38 /* Build configuration list for PBXNativeTarget "JoeExcelView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D83A2AA71DFA8D340018FA38 /* Debug */,
-				D83A2AA81DFA8D340018FA38 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D83A2A871DFA8D340018FA38 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>13FA95A2FB062369381562ED</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A31EAB0713006E8C92A75D70</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5721F4F6E81E40B68342F743</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>572B6DE9D74B80C2F773603D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-JoeExcelView/Pods-JoeExcelView-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>A31EAB0713006E8C92A75D70</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-JoeExcelView.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A5761FC8A78F7090E93A74AD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-JoeExcelView.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-JoeExcelView/Pods-JoeExcelView.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AE2D5BD8DD55A7DB6E35B4E2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-JoeExcelView.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-JoeExcelView/Pods-JoeExcelView.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BB6D2F4098FE2C42A1E5C005</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A31EAB0713006E8C92A75D70</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C0E6FD48A93FE5E5F91B3A7A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-JoeExcelView/Pods-JoeExcelView-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>D83A2A861DFA8D340018FA38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D83A2A911DFA8D340018FA38</string>
+				<string>D83A2A901DFA8D340018FA38</string>
+				<string>DC4606EB0F2BEC67A5747E6C</string>
+				<string>BB6D2F4098FE2C42A1E5C005</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A871DFA8D340018FA38</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0810</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>QQ</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>D83A2A8E1DFA8D340018FA38</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.1</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>D83A2A8A1DFA8D340018FA38</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>D83A2A861DFA8D340018FA38</string>
+			<key>productRefGroup</key>
+			<string>D83A2A901DFA8D340018FA38</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>D83A2A8E1DFA8D340018FA38</string>
+			</array>
+		</dict>
+		<key>D83A2A8A1DFA8D340018FA38</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D83A2AA41DFA8D340018FA38</string>
+				<string>D83A2AA51DFA8D340018FA38</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D83A2A8B1DFA8D340018FA38</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D83A2AC31DFA9FB90018FA38</string>
+				<string>D83A2A9A1DFA8D340018FA38</string>
+				<string>D83A2A971DFA8D340018FA38</string>
+				<string>D83A2AB71DFA921B0018FA38</string>
+				<string>D83A2AAB1DFA8D8B0018FA38</string>
+				<string>D83A2AC01DFA9EC60018FA38</string>
+				<string>D83A2ABD1DFA9EB80018FA38</string>
+				<string>D83A2A941DFA8D340018FA38</string>
+				<string>D83A2AB21DFA8E360018FA38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D83A2A8C1DFA8D340018FA38</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>13FA95A2FB062369381562ED</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D83A2A8D1DFA8D340018FA38</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D83A2AA21DFA8D340018FA38</string>
+				<string>D83A2A9F1DFA8D340018FA38</string>
+				<string>D83A2A9D1DFA8D340018FA38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D83A2A8E1DFA8D340018FA38</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D83A2AA61DFA8D340018FA38</string>
+			<key>buildPhases</key>
+			<array>
+				<string>5721F4F6E81E40B68342F743</string>
+				<string>D83A2A8B1DFA8D340018FA38</string>
+				<string>D83A2A8C1DFA8D340018FA38</string>
+				<string>D83A2A8D1DFA8D340018FA38</string>
+				<string>572B6DE9D74B80C2F773603D</string>
+				<string>C0E6FD48A93FE5E5F91B3A7A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>JoeExcelView</string>
+			<key>productName</key>
+			<string>JoeExcelView</string>
+			<key>productReference</key>
+			<string>D83A2A8F1DFA8D340018FA38</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>D83A2A8F1DFA8D340018FA38</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>JoeExcelView.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D83A2A901DFA8D340018FA38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D83A2A8F1DFA8D340018FA38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A911DFA8D340018FA38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D83A2A951DFA8D340018FA38</string>
+				<string>D83A2A961DFA8D340018FA38</string>
+				<string>D83A2A981DFA8D340018FA38</string>
+				<string>D83A2A991DFA8D340018FA38</string>
+				<string>D83A2AC71DFAAEB90018FA38</string>
+				<string>D83A2A9B1DFA8D340018FA38</string>
+				<string>D83A2A9E1DFA8D340018FA38</string>
+				<string>D83A2AA01DFA8D340018FA38</string>
+				<string>D83A2AA31DFA8D340018FA38</string>
+				<string>D83A2A921DFA8D340018FA38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>JoeExcelView</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A921DFA8D340018FA38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D83A2A931DFA8D340018FA38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A931DFA8D340018FA38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A941DFA8D340018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2A931DFA8D340018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2A951DFA8D340018FA38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A961DFA8D340018FA38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A971DFA8D340018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2A961DFA8D340018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2A981DFA8D340018FA38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A991DFA8D340018FA38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A9A1DFA8D340018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2A991DFA8D340018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2A9B1DFA8D340018FA38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D83A2A9C1DFA8D340018FA38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A9C1DFA8D340018FA38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A9D1DFA8D340018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2A9B1DFA8D340018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2A9E1DFA8D340018FA38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2A9F1DFA8D340018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2A9E1DFA8D340018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2AA01DFA8D340018FA38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D83A2AA11DFA8D340018FA38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AA11DFA8D340018FA38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AA21DFA8D340018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2AA01DFA8D340018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2AA31DFA8D340018FA38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AA41DFA8D340018FA38</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D83A2AA51DFA8D340018FA38</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D83A2AA61DFA8D340018FA38</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D83A2AA71DFA8D340018FA38</string>
+				<string>D83A2AA81DFA8D340018FA38</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D83A2AA71DFA8D340018FA38</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A5761FC8A78F7090E93A74AD</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>JoeExcelView/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>QQ.JoeExcelView</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D83A2AA81DFA8D340018FA38</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>AE2D5BD8DD55A7DB6E35B4E2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>JoeExcelView/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>QQ.JoeExcelView</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D83A2AA91DFA8D8B0018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PadExcelContentTableView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AAA1DFA8D8B0018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PadExcelContentTableView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AAB1DFA8D8B0018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2AAA1DFA8D8B0018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2AAF1DFA8E360018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PadExcelContentTableViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AB01DFA8E360018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PadExcelContentTableViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AB21DFA8E360018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2AB01DFA8E360018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2AB41DFA921B0018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PadExcelContentCollectionViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AB51DFA921B0018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PadExcelContentCollectionViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AB71DFA921B0018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2AB51DFA921B0018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2ABB1DFA9EB80018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PadExcelHeaderView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2ABC1DFA9EB80018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PadExcelHeaderView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2ABD1DFA9EB80018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2ABC1DFA9EB80018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2ABE1DFA9EC60018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PadExcelHeaderViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2ABF1DFA9EC60018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PadExcelHeaderViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AC01DFA9EC60018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2ABF1DFA9EC60018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2AC11DFA9FB80018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PadExcelView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AC21DFA9FB90018FA38</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PadExcelView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AC31DFA9FB90018FA38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D83A2AC21DFA9FB90018FA38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D83A2AC41DFAA9C30018FA38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>JoeExcel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AC51DFAAE8B0018FA38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D83A2AA91DFA8D8B0018FA38</string>
+				<string>D83A2AAA1DFA8D8B0018FA38</string>
+				<string>D83A2AAF1DFA8E360018FA38</string>
+				<string>D83A2AB01DFA8E360018FA38</string>
+				<string>D83A2AB41DFA921B0018FA38</string>
+				<string>D83A2AB51DFA921B0018FA38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ExcelContent</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AC61DFAAEA90018FA38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D83A2ABB1DFA9EB80018FA38</string>
+				<string>D83A2ABC1DFA9EB80018FA38</string>
+				<string>D83A2ABE1DFA9EC60018FA38</string>
+				<string>D83A2ABF1DFA9EC60018FA38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ExcelHeader</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D83A2AC71DFAAEB90018FA38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D83A2AC61DFAAEA90018FA38</string>
+				<string>D83A2AC51DFAAE8B0018FA38</string>
+				<string>D83A2AC41DFAA9C30018FA38</string>
+				<string>D83A2AC11DFA9FB80018FA38</string>
+				<string>D83A2AC21DFA9FB90018FA38</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ExcelView</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DC4606EB0F2BEC67A5747E6C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A5761FC8A78F7090E93A74AD</string>
+				<string>AE2D5BD8DD55A7DB6E35B4E2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D83A2A871DFA8D340018FA38</string>
+</dict>
+</plist>
