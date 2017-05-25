@@ -25,7 +25,7 @@
                         @[@"股票代码", @"公司", @"公司2",@"公司3",@"公司4",@"公司5",@"公司6",@"公司7",@"公司8",@"公司9"],
                         ];
 //    PadExcelView *joeExcelView = [[PadExcelView alloc] initWithFrame:self.view.bounds];
-    PadExcelView *joeExcelView = [[PadExcelView alloc] initWithModels:[NSMutableArray arrayWithArray:array] frozenNumber:1];
+    PadExcelView *joeExcelView = [[PadExcelView alloc] initWithModels:[NSMutableArray arrayWithArray:array] frozenNumber:2];
     [self.view addSubview:joeExcelView];
     [joeExcelView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.bottom.equalTo(self.view);

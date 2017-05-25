@@ -39,12 +39,22 @@
 
 - (void)initViews {
         
-        UILabel *vNumLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
-        vNumLab.backgroundColor = [UIColor yellowColor];
-        vNumLab.textAlignment = NSTextAlignmentCenter;
-        vNumLab.text = @"num";
-        [self addSubview:vNumLab];
+//        UILabel *vNumLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
+//    UILabel *vNumLab = [[UILabel alloc] init];
+    CGFloat startX = 0;
+    for (int i = 0; i < self.frozenNumber; i ++) {
+        UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(startX, 0, 60, 30)];
+        tempLabel.textAlignment = NSTextAlignmentCenter;
+        tempLabel.text = self.models.firstObject[i];
+        [self addSubview:tempLabel];
+        startX += 60;
         
+    }
+//        vNumLab.backgroundColor = [UIColor yellowColor];
+//        vNumLab.textAlignment = NSTextAlignmentCenter;
+//        vNumLab.text = @"num";
+//        [self addSubview:vNumLab];
+    
         // 顶部横向序号CollectionView
         UICollectionViewFlowLayout *collectionViewFlowLayout = [[UICollectionViewFlowLayout alloc] init];
         [collectionViewFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
@@ -54,9 +64,9 @@
         [self addSubview:topCollectionView];
         __weak typeof(self) weakSelf = self;
         [topCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(vNumLab.mas_trailing);
-            make.top.equalTo(vNumLab);
-            make.trailing.equalTo(weakSelf);
+            make.leading.equalTo(weakSelf).offset(startX);
+//            make.top.equalTo(vNumLab);
+            make.top.trailing.equalTo(weakSelf);
             make.height.mas_equalTo(30);
         }];
         

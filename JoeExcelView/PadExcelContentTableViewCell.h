@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PadExcelContentTableViewCell : UITableViewCell
-@property (strong, nonatomic) UILabel *leftTextLab;
+
+- (void)updateWithModel:(NSMutableArray *)model frozenNumber:(NSUInteger) frozenNumber;
 @end

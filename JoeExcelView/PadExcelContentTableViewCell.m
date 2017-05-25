@@ -9,7 +9,7 @@
 #import "PadExcelContentTableViewCell.h"
 #import "Masonry.h"
 @implementation PadExcelContentTableViewCell
-@synthesize leftTextLab;
+
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -17,13 +17,13 @@
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         __weak typeof(self) weakSelf = self;
-        leftTextLab = [[UILabel alloc] init];
-        leftTextLab.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:leftTextLab];
-        [leftTextLab mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.top.bottom.equalTo(weakSelf.contentView);
-            make.width.mas_equalTo(60);
-        }];
+//        leftTextLab = [[UILabel alloc] init];
+//        leftTextLab.textAlignment = NSTextAlignmentCenter;
+//        [self.contentView addSubview:leftTextLab];
+//        [leftTextLab mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.leading.top.bottom.equalTo(weakSelf.contentView);
+//            make.width.mas_equalTo(60);
+//        }];
         
         UIView *vLineView = [[UIView alloc] init];
         vLineView.backgroundColor = [UIColor redColor];
@@ -44,6 +44,17 @@
         
     }
     return self;
+}
+
+- (void)updateWithModel:(NSMutableArray *)model frozenNumber:(NSUInteger)frozenNumber {
+    CGFloat startX = 0;
+    for (int i = 0; i < frozenNumber; i ++) {
+        UILabel * tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(startX, 0, 60, 35)];
+        tempLabel.textAlignment = NSTextAlignmentCenter;
+        tempLabel.text = model[i];
+        [self.contentView addSubview:tempLabel];
+        startX += 60;
+    }
 }
 
 

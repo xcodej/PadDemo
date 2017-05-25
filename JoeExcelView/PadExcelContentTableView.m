@@ -58,7 +58,7 @@ static NSString *clIdentify = @"collectionViewCellIdentify";
         collectionViewFlowLayout.minimumInteritemSpacing = 0;
         collectionViewFlowLayout.minimumLineSpacing = 0;
         [collectionViewFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-        UICollectionView *contentCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(60, 0, self.frame.size.width-60, 35) collectionViewLayout:collectionViewFlowLayout];
+        UICollectionView *contentCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(60 * self.frozenNumber, 0, self.frame.size.width-60*self.frozenNumber, 35) collectionViewLayout:collectionViewFlowLayout];
         contentCollectionView.showsHorizontalScrollIndicator = NO;
         contentCollectionView.backgroundColor = [UIColor whiteColor];
         contentCollectionView.delegate = self;
@@ -68,7 +68,8 @@ static NSString *clIdentify = @"collectionViewCellIdentify";
         [contentCollectionView registerClass:[PadExcelContentCollectionViewCell class] forCellWithReuseIdentifier:clIdentify];
     }
     
-    cell.leftTextLab.text = self.cellModelArray[indexPath.row + 1][0];
+//    cell.leftTextLab.text = self.cellModelArray[indexPath.row + 1][0];
+    [cell updateWithModel:self.cellModelArray[indexPath.row + 1] frozenNumber:self.frozenNumber];
     for (UIView *view in cell.contentView.subviews) {
         if ([view isKindOfClass:[UICollectionView class]]) {
             UICollectionView *collectionView = (UICollectionView *)view;
@@ -96,6 +97,10 @@ static NSString *clIdentify = @"collectionViewCellIdentify";
 
 - (CGSize)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath*)indexPath{
     return CGSizeMake(100, 35);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self selectRowAtIndexPath:[NSIndexPath indexPathForRow:collectionView.tag inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView*)scrollView
